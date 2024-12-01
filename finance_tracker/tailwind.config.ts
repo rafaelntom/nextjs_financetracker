@@ -6,6 +6,9 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -40,34 +43,8 @@ export default {
           secondary: "#5E8C61",
         },
       },
-      borderRadius: {
-        DEFAULT: "8px",
-        md: "10px",
-        lg: "12px",
-      },
-      gradients: {
-        radial: [
-          "radial-gradient(circle, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-        ],
-        directions: {
-          top: "linear-gradient(0deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          right:
-            "linear-gradient(90deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          bottom:
-            "linear-gradient(180deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          left: "linear-gradient(270deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          topRight:
-            "linear-gradient(45deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          bottomRight:
-            "linear-gradient(135deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          topLeft:
-            "linear-gradient(225deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-          bottomLeft:
-            "linear-gradient(315deg, #960200ff, #001011ff, #ce6c47ff, #fffffcff, #5e8c61ff)",
-        },
-      },
     },
   },
 
-  plugins: [],
+  plugins: [require("daisyui")],
 } satisfies Config;
